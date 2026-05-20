@@ -1,0 +1,91 @@
+{
+    "name": "mj-code-sorter",
+    "publisher": "mj-yun",
+    "displayName": "code sorter",
+    "description": "Code sorter for Java, TS, and JS files",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mj-youn/mj-code-sorter.git"
+    },
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Other",
+        "Formatters"
+    ],
+    "activationEvents": [
+        "onLanguage:java",
+        "onLanguage:javascript",
+        "onLanguage:javascriptreact",
+        "onLanguage:typescript",
+        "onLanguage:typescriptreact"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "mjCodeSorter.sortMembers",
+                "title": "Sort Members (MJ)"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "resourceLangId == java || resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact",
+                    "command": "mjCodeSorter.sortMembers",
+                    "group": "navigation"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "MJ Code Sorter",
+            "properties": {
+                "mjCodeSorter.autoFormat": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Automatically run Format Document after sorting members."
+                },
+                "mjCodeSorter.sortOnSave": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Automatically sort members when saving a file."
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "compile-tests": "tsc -p . --outDir out",
+        "watch-tests": "tsc -p . -w --outDir out",
+        "pretest": "npm run compile-tests && npm run compile && npm run lint",
+        "lint": "eslint src",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/babel__generator": "^7.27.0",
+        "@types/babel__traverse": "^7.28.0",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "22.x",
+        "@types/vscode": "^1.80.0",
+        "@vscode/test-cli": "^0.0.12",
+        "@vscode/test-electron": "^2.5.2",
+        "eslint": "^9.39.3",
+        "ts-loader": "^9.5.4",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.56.1",
+        "webpack": "^5.105.3",
+        "webpack-cli": "^6.0.1"
+    },
+    "dependencies": {
+        "@babel/generator": "^7.29.1",
+        "@babel/parser": "^7.29.3",
+        "@babel/traverse": "^7.29.0",
+        "@babel/types": "^7.29.0",
+        "java-parser": "^3.0.1"
+    }
+}

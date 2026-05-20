@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# VS Code Extension compilation output
+out/
+dist/
+.vscode-test/
+
+# Packaged extension
+*.vsix
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# mj-code-sorter Temporary / Test scripts
+test_sorter_logic*.js
+test_sorter_logic*.ts
+scratch/
