@@ -6,7 +6,7 @@
     "version": "0.1.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/mj-youn/mj-code-sorter.git"
+        "url": "https://github.com/MJ-Youn/code-sorter-extension.git"
     },
     "engines": {
         "vscode": "^1.80.0"
