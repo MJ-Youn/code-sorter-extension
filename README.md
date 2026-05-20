@@ -1,7 +1,6 @@
 # 📝 MJ Code Sorter
 
 [![Open VSX](https://img.shields.io/badge/Open%20VSX-mj--code--sorter-blue)](https://open-vsx.org/extension/mj-yun/mj-code-sorter)
-_(💡 현재 Open VSX Registry를 통해 배포되고 있습니다. 위 뱃지를 클릭하면 마켓플레이스 페이지로 이동합니다.)_
 
 **MJ Code Sorter**는 Java, JavaScript, TypeScript 파일의 클래스 멤버, 변수, 함수 등을 지정된 규칙에 따라 자동으로 정렬해 주는 VS Code 확장 프로그램입니다.
 특히 기존 코드베이스(AngularJS 등)와 최신 모던 프론트엔드/백엔드 코드를 모두 깔끔하게 유지할 수 있도록 도와줍니다.
